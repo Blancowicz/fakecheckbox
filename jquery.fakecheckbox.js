@@ -3,6 +3,7 @@
     $.fn.fakecheckbox = function( options ) {
         var settings = {
             // These are the defaults.
+            customClasses: '',
             cursorDefault: 'cursor',
             iconClasses: '',
             css: {
@@ -25,7 +26,7 @@
         this.filter('input').each(function() {
             var $checkbox = $(this);
             $checkbox.hide();
-            var $div = $('<div><i class="fa fa-check ' + settings.iconClasses + '" ' + (!$(this).prop('checked') ? 'style="display:none"' : '') + '></i></div>');
+            var $div = $('<div><i class="fa ' + (settings.iconClasses ? settings.iconClasses : 'fa-check') + '" ' + (!$(this).prop('checked') ? 'style="display:none"' : '') + '></i></div>');
             $div.css(settings.css);
             $div.addClass(settings.customClasses);
 
