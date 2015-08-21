@@ -24,3 +24,13 @@ Styling can be altered sending an object this way:
 var css = {padding: 10px};
 $('.fake_checkbox').fakecheckbox({css});
 ```
+
+And set a diferent icon:
+```jquery
+$('.fake_checkbox').fakecheckbox({iconClasses:'fa-github'});
+```
+
+Note that you can alter size of icon with modifiers fa-Xx:
+```jquery
+$('.fake_checkbox').fakecheckbox({iconClasses:'fa-github fa-2x'});
+```
